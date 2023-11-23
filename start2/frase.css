@@ -38,17 +38,17 @@ main span i {
 main span i:nth-of-type(1) {
   opacity: 0%;
   order: 0;
-  animation: scorrimentoParole 1.5s linear;
+  animation: scorrimentoParole 4.5s linear infinite;
 }
 
 main span i:nth-of-type(2) {
-  animation: scorrimentoParole 1.5s linear 1.5s;
+  animation: scorrimentoParole 4.5s linear 1.5s infinite;
   opacity: 0%;
   order: 0;
 }
 
 main span i:nth-of-type(3) {
-  animation: scorrimentoUltima 1.5s linear 3s;
+  animation: scorrimentoParole 4.5s linear 3s infinite;
   opacity: 0%;
   order: 0;
   animation-fill-mode: forwards;
@@ -56,8 +56,14 @@ main span i:nth-of-type(3) {
 
 @keyframes scorrimentoParole {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-25px);
     opacity: 0%;
+    order: -1;
+  }
+
+  8% {
+    transform: translateY(0px);
+    opacity: 100%;
     order: -1;
   }
 
@@ -67,35 +73,21 @@ main span i:nth-of-type(3) {
     order: -1;
   }
 
-  75% {
-    transform: translateY(0px);
-    opacity: 100%;
-    order: -1;
-  }
-
-  100% {
-    transform: translateY(20px);
-    opacity: 0%;
-    order: -1;
-  }
-}
-
-@keyframes scorrimentoUltima {
-  0% {
-    transform: translateY(-20px);
+  32% {
+    transform: translateY(25px);
     opacity: 0%;
     order: -1;
   }
 
-  25% {
-    transform: translateY(0px);
-    opacity: 100%;
-    order: -1;
+  33% {
+    transform: translateY(25px);
+    opacity: 0%;
+    order: 0;
   }
 
   100% {
-    transform: translateY(0px);
-    opacity: 100%;
-    order: -1;
+    transform: translateY(25px);
+    opacity: 0%;
+    order: 0;
   }
 }
