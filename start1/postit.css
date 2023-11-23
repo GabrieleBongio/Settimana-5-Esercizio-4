@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.5em;
+}
+
+body {
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+  background-color: #666666;
+}
+
+.container {
+  margin-top: 1rem;
+  margin-inline: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.postItContainer {
+  width: 25%;
+  aspect-ratio: 1/1;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.postItContainer .postIt {
+  width: 85%;
+  aspect-ratio: 5/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.5s;
+}
+
+.postItContainer:nth-of-type(1) .postIt {
+  background-color: #ffb6c1;
+  box-shadow: inset 0px -30px 30px #b38e94;
+  transform: rotate(12deg);
+}
+
+.postItContainer:nth-of-type(2) .postIt {
+  background-color: #add8e6;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(-7deg);
+}
+
+.postItContainer:nth-of-type(3) .postIt {
+  background-color: #98fb98;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(2deg);
+}
+
+.postItContainer:nth-of-type(4) .postIt {
+  background-color: #fdfd96;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(14deg);
+}
+
+.postItContainer:nth-of-type(5) .postIt {
+  background-color: #dda0dd;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(-10deg);
+}
+
+.postItContainer:nth-of-type(6) .postIt {
+  background-color: #ffdab9;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(20deg);
+}
+
+.postItContainer:nth-of-type(7) .postIt {
+  background-color: #e6e6fa;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(-5deg);
+}
+
+.postItContainer:nth-of-type(8) .postIt {
+  background-color: #fa8072;
+  box-shadow: inset 0px -30px 30px #66666680;
+  transform: rotate(17deg);
+}
+
+.postIt h3 {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.postItContainer .postIt:hover {
+  transform: rotate(0deg) scale(1.4);
+  font-size: 1.1rem;
+  z-index: 1;
+  box-shadow: inset 0px -30px 50px #66666680, 8px 8px 5px #333333;
+}

@@ -1,0 +1,101 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+html {
+  font-size: 1.7em;
+}
+
+body {
+  margin: 0;
+  font-family: "Bree Serif", serif;
+}
+
+main {
+  border: 2px solid #606060;
+  max-width: 900px;
+  margin-inline: auto;
+  margin-top: 7rem;
+  padding: 2rem;
+  font-weight: 600;
+  color: #323232;
+}
+
+main span {
+  display: inline-flex;
+}
+
+main span i {
+  color: #6a879a;
+}
+
+main span i:nth-of-type(1) {
+  opacity: 0%;
+  order: 0;
+  animation: scorrimentoParole 1.5s linear;
+}
+
+main span i:nth-of-type(2) {
+  animation: scorrimentoParole 1.5s linear 1.5s;
+  opacity: 0%;
+  order: 0;
+}
+
+main span i:nth-of-type(3) {
+  animation: scorrimentoUltima 1.5s linear 3s;
+  opacity: 0%;
+  order: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scorrimentoParole {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0%;
+    order: -1;
+  }
+
+  25% {
+    transform: translateY(0px);
+    opacity: 100%;
+    order: -1;
+  }
+
+  75% {
+    transform: translateY(0px);
+    opacity: 100%;
+    order: -1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0%;
+    order: -1;
+  }
+}
+
+@keyframes scorrimentoUltima {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0%;
+    order: -1;
+  }
+
+  25% {
+    transform: translateY(0px);
+    opacity: 100%;
+    order: -1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    order: -1;
+  }
+}
